@@ -1,51 +1,24 @@
 .container {
-  display: flex;
-  width: 600px;
+  width: min-content;
+  border: 30px solid pink;
 }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  width: 75%;
-  background-color: purple;
-  border: 50px solid pink;
-}
-
-.box {
-  width: 12.5%;
+.container > div > div {
+  width: 50px;
   height: 50px;
-  line-height: 50px;
+  border: solid 1px;
+  background-color: aquamarine;
   text-align: center;
 }
 
-div.box:nth-child(-n + 8):nth-child(odd) {
-  background: greenyellow;
+.container > div {
+  display: flex;
 }
 
-div.box:nth-child(n + 9):nth-child(-n + 16):nth-child(even) {
-  background: greenyellow;
+.container > :nth-child(odd) > :nth-child(even) {
+  background-color: coral;
 }
 
-div.box:nth-child(n + 17):nth-child(-n + 24):nth-child(odd) {
-  background: greenyellow;
-}
-
-div.box:nth-child(n + 25):nth-child(-n + 32):nth-child(even) {
-  background: greenyellow;
-}
-
-div.box:nth-child(n + 33):nth-child(-n + 40):nth-child(odd) {
-  background: greenyellow;
-}
-
-div.box:nth-child(n + 41):nth-child(-n + 48):nth-child(even) {
-  background: greenyellow;
-}
-
-div.box:nth-child(n + 49):nth-child(-n + 56):nth-child(odd) {
-  background: greenyellow;
-}
-
-div.box:nth-child(n + 57):nth-child(-n + 64):nth-child(even) {
-  background: greenyellow;
+.container > :nth-child(even) > :nth-child(odd) {
+  background-color: coral;
 }
